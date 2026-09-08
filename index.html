@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tanmay Malaviya — Building Jarvis</title>
+
+<meta name="description"
+content="Tanmay Malaviya is building Jarvis, a personal assistant project.">
+
+<meta name="author" content="Tanmay Malaviya">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#05060a">
+
+<meta property="og:title"
+content="Tanmay Malaviya — Building Jarvis">
+<meta property="og:description"
+content="Tanmay Malaviya is building Jarvis, a personal assistant project.">
+<meta property="og:type" content="website">
+<meta property="og:url"
+content="https://tanmaypatel252009-ctrl.github.io/">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#f4f7ff;
+  background:#05060a;
+  overflow-x:hidden;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 15% 20%,
+      rgba(0,234,255,.16),transparent 30%),
+    radial-gradient(circle at 85% 75%,
+      rgba(145,70,255,.16),transparent 30%);
+}
+
+.container{
+  width:min(1050px,92%);
+  margin:auto;
+}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(5,6,10,.78);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid #18212c;
+}
+
+.nav{
+  height:68px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.logo span{
+  color:#00eaff;
+  text-shadow:0 0 18px #00eaff;
+}
+
+.nav a{
+  color:#aeb9ca;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.hero{
+  min-height:88vh;
+  display:flex;
+  align-items:center;
+  padding:80px 0;
+}
+
+.badge{
+  display:inline-block;
+  padding:9px 14px;
+  border:1px solid #174b57;
+  border-radius:30px;
+  background:#082027;
+  color:#79edff;
+  font-size:13px;
+  margin-bottom:25px;
+}
+
+h1{
+  font-size:clamp(46px,8vw,88px);
+  line-height:.98;
+  letter-spacing:-3px;
+}
+
+h1 span{
+  color:#00eaff;
+  text-shadow:
+    0 0 20px rgba(0,234,255,.55);
+}
+
+.hero p{
+  max-width:700px;
+  color:#aeb9ca;
+  font-size:19px;
+  line-height:1.7;
+  margin-top:25px;
+}
+
+.button{
+  display:inline-block;
+  margin-top:32px;
+  padding:14px 21px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:700;
+  color:#031014;
+  background:#00eaff;
+  box-shadow:0 0 30px rgba(0,234,255,.25);
+}
+
+section{
+  padding:80px 0;
+}
+
+h2{
+  font-size:40px;
+  margin-bottom:14px;
+}
+
+.subtitle{
+  color:#8f9caf;
+  line-height:1.7;
+  max-width:680px;
+  margin-bottom:30px;
+}
+
+.card{
+  padding:30px;
+  border-radius:20px;
+  border:1px solid #1a2632;
+  background:rgba(255,255,255,.035);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  border-color:#00a9bd;
+  box-shadow:0 15px 45px rgba(0,0,0,.25);
+}
+
+.card h3{
+  font-size:28px;
+  margin-bottom:14px;
+}
+
+.card p{
+  color:#a2adbf;
+  line-height:1.8;
+}
+
+.privacy{
+  max-width:760px;
+  padding:22px;
+  border-left:3px solid #00eaff;
+  background:rgba(255,255,255,.025);
+  color:#98a4b8;
+  line-height:1.7;
+}
+
+footer{
+  border-top:1px solid #18212c;
+  padding:30px 0;
+  color:#718096;
+  font-size:13px;
+}
+
+@media(max-width:600px){
+  .hero{
+    min-height:78vh;
+    padding:65px 0;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  h1{
+    letter-spacing:-2px;
+  }
+
+  h2{
+    font-size:31px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav">
+    <div class="logo">TANMAY<span>.</span></div>
+    <a href="#jarvis">JARVIS</a>
+  </div>
+</nav>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+
+    <div class="badge">
+      PROJECT IN DEVELOPMENT
+    </div>
+
+    <h1>
+      Tanmay Malaviya<br>
+      <span>is building Jarvis.</span>
+    </h1>
+
+    <p>
+      Jarvis is a personal assistant project being developed
+      by Tanmay Malaviya.
+    </p>
+
+    <a class="button" href="#jarvis">
+      Explore Jarvis
+    </a>
+
+  </div>
+</section>
+
+<section id="jarvis">
+  <div class="container">
+
+    <h2>Jarvis</h2>
+
+    <p class="subtitle">
+      One project. One goal: build a useful personal assistant.
+    </p>
+
+    <div class="card">
+      <h3>Tanmay Malaviya → Jarvis</h3>
+
+      <p>
+        Tanmay Malaviya is building Jarvis,
+        an independent personal assistant project.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <h2>Privacy</h2>
+
+    <div class="privacy">
+      Only general public information about the Jarvis
+      project is published here. Private development details,
+      source code, and internal project history are not
+      published.
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Tanmay Malaviya — Building Jarvis.
+  </div>
+</footer>
+
+</body>
+</html>
