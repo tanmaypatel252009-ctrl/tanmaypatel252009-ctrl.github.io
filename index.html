@@ -7,21 +7,28 @@
 <title>Tanmay Malaviya — Building Jarvis</title>
 
 <meta name="description"
-content="Tanmay Malaviya is building Jarvis, a personal assistant project.">
+content="Tanmay Malaviya is independently developing Jarvis, a multi-purpose personal assistant project focused on AI, automation, voice interaction, Android integration, and practical assistance.">
 
 <meta name="author" content="Tanmay Malaviya">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#05060a">
 
+<link rel="canonical"
+href="https://tanmaypatel252009-ctrl.github.io/">
+
 <meta property="og:title"
 content="Tanmay Malaviya — Building Jarvis">
+
 <meta property="og:description"
-content="Tanmay Malaviya is building Jarvis, a personal assistant project.">
+content="Tanmay Malaviya is independently developing Jarvis, a multi-purpose personal assistant project.">
+
 <meta property="og:type" content="website">
+
 <meta property="og:url"
 content="https://tanmaypatel252009-ctrl.github.io/">
 
 <style>
+
 *{
   margin:0;
   padding:0;
@@ -53,7 +60,7 @@ body::before{
 }
 
 .container{
-  width:min(1050px,92%);
+  width:min(1100px,92%);
   margin:auto;
 }
 
@@ -61,16 +68,17 @@ nav{
   position:sticky;
   top:0;
   z-index:10;
-  background:rgba(5,6,10,.78);
+  background:rgba(5,6,10,.82);
   backdrop-filter:blur(16px);
   border-bottom:1px solid #18212c;
 }
 
 .nav{
-  height:68px;
+  min-height:68px;
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:20px;
 }
 
 .logo{
@@ -84,10 +92,21 @@ nav{
   text-shadow:0 0 18px #00eaff;
 }
 
+.nav-links{
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
+}
+
 .nav a{
   color:#aeb9ca;
   text-decoration:none;
   font-size:14px;
+  transition:.25s;
+}
+
+.nav a:hover{
+  color:#00eaff;
 }
 
 .hero{
@@ -116,12 +135,11 @@ h1{
 
 h1 span{
   color:#00eaff;
-  text-shadow:
-    0 0 20px rgba(0,234,255,.55);
+  text-shadow:0 0 20px rgba(0,234,255,.55);
 }
 
 .hero p{
-  max-width:700px;
+  max-width:760px;
   color:#aeb9ca;
   font-size:19px;
   line-height:1.7;
@@ -138,10 +156,25 @@ h1 span{
   color:#031014;
   background:#00eaff;
   box-shadow:0 0 30px rgba(0,234,255,.25);
+  transition:.25s;
+}
+
+.button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 40px rgba(0,234,255,.4);
 }
 
 section{
-  padding:80px 0;
+  padding:85px 0;
+}
+
+.section-label{
+  color:#00eaff;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:12px;
 }
 
 h2{
@@ -152,7 +185,7 @@ h2{
 .subtitle{
   color:#8f9caf;
   line-height:1.7;
-  max-width:680px;
+  max-width:760px;
   margin-bottom:30px;
 }
 
@@ -171,7 +204,7 @@ h2{
 }
 
 .card h3{
-  font-size:28px;
+  font-size:25px;
   margin-bottom:14px;
 }
 
@@ -180,8 +213,85 @@ h2{
   line-height:1.8;
 }
 
+.about-card{
+  max-width:900px;
+}
+
+.about-card p{
+  margin-bottom:16px;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.feature{
+  min-height:170px;
+}
+
+.feature-icon{
+  font-size:27px;
+  margin-bottom:15px;
+}
+
+.feature h3{
+  font-size:19px;
+  margin-bottom:9px;
+}
+
+.feature p{
+  font-size:14px;
+  line-height:1.7;
+}
+
+.status{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.status-card{
+  position:relative;
+  overflow:hidden;
+}
+
+.status-card::after{
+  content:"";
+  position:absolute;
+  width:130px;
+  height:130px;
+  right:-55px;
+  top:-55px;
+  border-radius:50%;
+  background:rgba(0,234,255,.08);
+}
+
+.status-title{
+  color:#79edff;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.vision{
+  padding:34px;
+  border-radius:24px;
+  border:1px solid #21313d;
+  background:
+    linear-gradient(135deg,
+      rgba(0,234,255,.07),
+      rgba(145,70,255,.07));
+}
+
+.vision p{
+  color:#aeb9ca;
+  line-height:1.85;
+  font-size:16px;
+}
+
 .privacy{
-  max-width:760px;
+  max-width:800px;
   padding:22px;
   border-left:3px solid #00eaff;
   background:rgba(255,255,255,.025);
@@ -196,7 +306,39 @@ footer{
   font-size:13px;
 }
 
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+@media(max-width:800px){
+
+  .features{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .status{
+    grid-template-columns:1fr;
+  }
+
+}
+
 @media(max-width:600px){
+
+  .nav{
+    min-height:62px;
+  }
+
+  .nav-links{
+    gap:10px;
+  }
+
+  .nav a{
+    font-size:12px;
+  }
+
   .hero{
     min-height:78vh;
     padding:65px 0;
@@ -213,7 +355,21 @@ footer{
   h2{
     font-size:31px;
   }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    padding:24px;
+  }
+
+  section{
+    padding:65px 0;
+  }
+
 }
+
 </style>
 </head>
 
@@ -221,18 +377,31 @@ footer{
 
 <nav>
   <div class="container nav">
-    <div class="logo">TANMAY<span>.</span></div>
-    <a href="#jarvis">JARVIS</a>
+
+    <div class="logo">
+      TANMAY<span>.</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="#about">ABOUT</a>
+      <a href="#jarvis">JARVIS</a>
+      <a href="#features">FEATURES</a>
+      <a href="#vision">VISION</a>
+    </div>
+
   </div>
 </nav>
 
 <main>
 
+<!-- HERO -->
+
 <section class="hero">
+
   <div class="container">
 
     <div class="badge">
-      PROJECT IN DEVELOPMENT
+      JARVIS • PROJECT IN DEVELOPMENT
     </div>
 
     <h1>
@@ -241,8 +410,9 @@ footer{
     </h1>
 
     <p>
-      Jarvis is a personal assistant project being developed
-      by Tanmay Malaviya.
+      An independently developed personal assistant project
+      focused on AI, voice interaction, automation,
+      Android integration and practical assistance.
     </p>
 
     <a class="button" href="#jarvis">
@@ -250,50 +420,488 @@ footer{
     </a>
 
   </div>
+
 </section>
 
-<section id="jarvis">
+
+<!-- ABOUT -->
+
+<section id="about">
+
   <div class="container">
+
+    <div class="section-label">
+      ABOUT THE CREATOR
+    </div>
+
+    <h2>Tanmay Malaviya</h2>
+
+    <p class="subtitle">
+      A BCA student from Gujarat, India, interested in
+      Artificial Intelligence, software development,
+      automation and emerging technologies.
+    </p>
+
+    <div class="card about-card">
+
+      <p>
+        Tanmay Malaviya is a BCA student from Gujarat, India,
+        with a strong interest in Artificial Intelligence,
+        Software Development, Automation and new technologies.
+      </p>
+
+      <p>
+        He enjoys learning new technologies, experimenting
+        with ideas, solving problems and turning concepts
+        into practical projects.
+      </p>
+
+      <p>
+        Rather than only learning technology theoretically,
+        Tanmay is interested in building real systems and
+        continuously improving them through hands-on development.
+      </p>
+
+      <p>
+        His main project is Jarvis, a personal assistant that
+        he is independently developing. The project is being
+        built step by step with a focus on useful capabilities,
+        practical tasks and future expansion.
+      </p>
+
+      <p>
+        Tanmay is currently working independently on the Jarvis
+        project, while continuously developing, testing and
+        upgrading the system.
+      </p>
+
+      <p>
+        His primary technology interest is Artificial Intelligence,
+        and his long-term goal is to use AI and software technology
+        to create practical and useful solutions.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- JARVIS -->
+
+<section id="jarvis">
+
+  <div class="container">
+
+    <div class="section-label">
+      THE PROJECT
+    </div>
 
     <h2>Jarvis</h2>
 
     <p class="subtitle">
-      One project. One goal: build a useful personal assistant.
+      One project. One goal: build a powerful,
+      useful and continuously improving personal assistant.
     </p>
 
-    <div class="card">
-      <h3>Tanmay Malaviya → Jarvis</h3>
+    <div class="vision">
 
       <p>
-        Tanmay Malaviya is building Jarvis,
-        an independent personal assistant project.
+        Jarvis is being developed as a multi-purpose personal
+        assistant designed to help with everyday tasks,
+        technical work, information, productivity and
+        different professional areas.
       </p>
+
     </div>
 
   </div>
+
 </section>
 
-<section>
+
+<!-- FEATURES -->
+
+<section id="features">
+
   <div class="container">
 
-    <h2>Privacy</h2>
+    <div class="section-label">
+      CAPABILITIES
+    </div>
 
-    <div class="privacy">
-      Only general public information about the Jarvis
-      project is published here. Private development details,
-      source code, and internal project history are not
-      published.
+    <h2>Jarvis Features</h2>
+
+    <p class="subtitle">
+      The project is being developed toward a broad range
+      of useful capabilities. Some capabilities are already
+      being developed, while others are part of the future roadmap.
+    </p>
+
+    <div class="features">
+
+
+      <div class="card feature">
+        <div class="feature-icon">🎙️</div>
+        <h3>Voice Commands</h3>
+        <p>
+          Interact with Jarvis through voice commands
+          and natural spoken instructions.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">👋</div>
+        <h3>Wake Word</h3>
+        <p>
+          Activate Jarvis using its wake word and
+          begin a command-driven interaction.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">🧠</div>
+        <h3>Smart Memory</h3>
+        <p>
+          Remember useful information and use stored
+          context to make future interactions more useful.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">💬</div>
+        <h3>AI Conversation</h3>
+        <p>
+          Ask questions, discuss ideas and receive
+          intelligent assistance.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">💻</div>
+        <h3>Coding Assistance</h3>
+        <p>
+          Help with programming, development tasks,
+          debugging and technical problem solving.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">📱</div>
+        <h3>Android & App Integration</h3>
+        <p>
+          The long-term goal is broader Android integration
+          and useful interaction with applications and devices.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">🔎</div>
+        <h3>Information Assistance</h3>
+        <p>
+          Help find, understand and organize useful
+          information for different tasks.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">⏰</div>
+        <h3>Tasks & Reminders</h3>
+        <p>
+          Assist with everyday tasks, reminders,
+          planning and productivity.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">🌐</div>
+        <h3>Language Support</h3>
+        <p>
+          Support multilingual interaction and
+          language-related assistance.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">🌾</div>
+        <h3>Farming Assistance</h3>
+        <p>
+          Provide useful agricultural information,
+          planning support and farming-related assistance.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">🏥</div>
+        <h3>Healthcare Assistance</h3>
+        <p>
+          Support healthcare and hospital-related
+          information and workflow tasks, without replacing
+          qualified medical professionals.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">⚡</div>
+        <h3>Electrical Engineering</h3>
+        <p>
+          Assist with electrical engineering concepts,
+          calculations, learning and technical references.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">🏗️</div>
+        <h3>Civil Engineering</h3>
+        <p>
+          Assist with civil engineering concepts,
+          calculations, learning and technical references.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">📊</div>
+        <h3>Commerce & Accounts</h3>
+        <p>
+          Help with commerce, accounting concepts,
+          calculations and related study tasks.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">📚</div>
+        <h3>Education & Study</h3>
+        <p>
+          Support learning, explanations, research,
+          study planning and educational tasks.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">💼</div>
+        <h3>Business & Productivity</h3>
+        <p>
+          Help organize ideas, workflows, planning,
+          productivity and business-related tasks.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">🔬</div>
+        <h3>Research Assistance</h3>
+        <p>
+          Assist with exploring information,
+          understanding concepts and organizing research.
+        </p>
+      </div>
+
+
+      <div class="card feature">
+        <div class="feature-icon">🔄</div>
+        <h3>Continuous Improvement</h3>
+        <p>
+          Jarvis is being continuously developed with
+          new capabilities, tools and improvements.
+        </p>
+      </div>
+
+
     </div>
 
   </div>
+
+</section>
+
+
+<!-- DEVELOPMENT -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-label">
+      DEVELOPMENT
+    </div>
+
+    <h2>Jarvis is evolving.</h2>
+
+    <p class="subtitle">
+      Tanmay is actively working on improving Jarvis
+      and expanding what it can do.
+    </p>
+
+    <div class="status">
+
+      <div class="card status-card">
+
+        <div class="status-title">
+          🔧 ACTIVE DEVELOPMENT
+        </div>
+
+        <h3>Continuous Upgrades</h3>
+
+        <p>
+          New capabilities, integrations, tools and
+          improvements are being developed and tested
+          step by step.
+        </p>
+
+      </div>
+
+
+      <div class="card status-card">
+
+        <div class="status-title">
+          👤 INDEPENDENT PROJECT
+        </div>
+
+        <h3>Built by Tanmay Malaviya</h3>
+
+        <p>
+          Tanmay is currently working independently
+          on the Jarvis project and developing its
+          capabilities over time.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VISION -->
+
+<section id="vision">
+
+  <div class="container">
+
+    <div class="section-label">
+      LONG-TERM VISION
+    </div>
+
+    <h2>More than a basic assistant.</h2>
+
+    <div class="vision">
+
+      <p>
+        The long-term vision for Jarvis is to become a
+        multi-purpose personal assistant capable of helping
+        across technology, education, productivity, farming,
+        healthcare-related workflows, engineering,
+        commerce, business, research and many other areas.
+      </p>
+
+      <br>
+
+      <p>
+        Jarvis is still under active development.
+        Its capabilities will continue to evolve as Tanmay
+        builds, tests, learns and upgrades the system.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FUTURE GOAL -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-label">
+      FUTURE
+    </div>
+
+    <h2>What's next for Tanmay?</h2>
+
+    <div class="card about-card">
+
+      <p>
+        After completing his BCA, Tanmay aims to pursue
+        opportunities in the software or AI field.
+      </p>
+
+      <p>
+        At the same time, he wants to continue developing
+        his own technology projects and explore the possibility
+        of turning a useful project into a product or business
+        in the future.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PRIVACY -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-label">
+      PRIVACY
+    </div>
+
+    <h2>Public information only.</h2>
+
+    <div class="privacy">
+
+      This website contains general public information
+      about Tanmay Malaviya and the Jarvis project.
+      Private development details, source code, internal
+      project history, private data and confidential
+      implementation details are not published here.
+
+    </div>
+
+  </div>
+
 </section>
 
 </main>
 
+
 <footer>
-  <div class="container">
-    © 2026 Tanmay Malaviya — Building Jarvis.
+
+  <div class="container footer-inner">
+
+    <div>
+      © 2026 Tanmay Malaviya — Building Jarvis.
+    </div>
+
+    <div>
+      Independently developed • In active development
+    </div>
+
   </div>
+
 </footer>
 
 </body>
